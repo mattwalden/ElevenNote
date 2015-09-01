@@ -18,11 +18,17 @@
             fizzBuzzList.Add(i.ToString());
         }
     }
-    foreach(var s in fizzBuzzList)
+
     {
 
 
     }
 
-   }
-<h1>Walden</h1>
+    <h1>Walden</h1>
+     <select name="theOption" onchange=" ">
+        @foreach (var s in fizzBuzzList)
+        {
+            <option value="@s">@s</option>
+        }
+    </select>
+}
