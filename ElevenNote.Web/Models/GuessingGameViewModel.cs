@@ -13,7 +13,7 @@ namespace ElevenNote.Web.Models
         [MinLength(2)]
         [MaxLength(20)]
         [Display(Name = "Your Name")]
-        public String Name { get; set; }
+        public string Name { get; set; }
 
         [Required]
         [Range(1,10)]
