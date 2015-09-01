@@ -1,0 +1,12 @@
+﻿@{var maxNumberOfDaysBeforeKilling = 365;
+   
+    }
+
+<h1>>Matt Walden</h1>
+Number of days before killing enemy:
+<select name="theOption" onchange=" ">
+    @for (var i = 0; i <= maxNumberOfDaysBeforeKilling; i++)
+    {
+    <option value="@i">@i</option>
+    }
+</select>
