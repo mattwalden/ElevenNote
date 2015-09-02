@@ -12,13 +12,13 @@ namespace ElevenNote.Models.ViewModels
         public int Id { get; set; }
         public string Title { get; set; }
 
-        [Display(Name  = "Date Modified")]
+        [Display(Name  = "Date Created")]
         public DateTime DateCreated { get; set; }
 
 
-        [Display(Name = "DateModified")]
+        [Display(Name = "Date Modified")]
         public DateTime? DateModified { get; set; }
-
+        [Display(Name = "Is Favorite")]
         public bool IsFavorite { get; set; }
 
     }

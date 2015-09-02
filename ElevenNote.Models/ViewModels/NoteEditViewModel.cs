@@ -19,7 +19,7 @@ namespace ElevenNote.Models.ViewModels
 
         [Required]
         [MaxLength(8000)]
-        public string Contents { get; set; }
+       public string Contents { get; set; }
         public DateTime DateCreated { get; set; }
         public Guid ApplicationUserId { get; set; }
     }
