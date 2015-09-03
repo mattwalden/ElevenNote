@@ -26,7 +26,7 @@ namespace ElevenNote.Services
                 note.Contents = model.Contents;
                 note.DateCreated = DateTime.UtcNow;
                 note.ApplicationUserId = userId;
-
+                note.IsFavorite = model.IsFavorite;
                 context.Notes.Add(note);
                 var result = context.SaveChanges();
                 return result == 1;
@@ -75,7 +75,9 @@ namespace ElevenNote.Services
                               {
                                   Contents = note.Contents,
                                   Id = note.Id,
-                                  Title = note.Title
+                                  Title = note.Title,
+                                  IsFavorite = note.IsFavorite
+                                
                               }).SingleOrDefault();
 
                 return result;
@@ -101,7 +103,7 @@ namespace ElevenNote.Services
                 note.Contents = model.Contents;
                 note.Title = model.Title;
                 note.DateModified = DateTime.UtcNow;
-
+                note.IsFavorite = model.IsFavorite;
                 // Save the changes to the database.
                 var result = context.SaveChanges();
                 return result == 1 /* was 1 record (success) or 0 records (unsuccessful) updated? */;

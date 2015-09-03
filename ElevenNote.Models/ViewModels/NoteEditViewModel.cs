@@ -21,6 +21,9 @@ namespace ElevenNote.Models.ViewModels
         [MaxLength(8000)]
        public string Contents { get; set; }
         public DateTime DateCreated { get; set; }
+        public DateTime DateMotified { get; set; }
         public Guid ApplicationUserId { get; set; }
+        [Display(Name ="Is Favorite")]
+        public bool IsFavorite { get; set; }
     }
 }
