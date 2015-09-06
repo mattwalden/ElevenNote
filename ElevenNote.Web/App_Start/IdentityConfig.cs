@@ -63,10 +63,10 @@ var requiredLength = ConfigurationManager.AppSettings
                 ["PasswordConfig.RequireDigit"];
 
 
-            var RequiredLowercase = ConfigurationManager.AppSettings["PasswordConfig.PasswordConfig.RequireLowercase"];
+            var RequiredLowercase = ConfigurationManager.AppSettings["PasswordConfig.RequireLowercase"];
 
 
-            var RequiredUppercase = ConfigurationManager.AppSettings["PasswordConfig.PasswordConfig.RequireUppercase"];
+            var RequiredUppercase = ConfigurationManager.AppSettings["PasswordConfig.RequireUppercase"];
 
 
 

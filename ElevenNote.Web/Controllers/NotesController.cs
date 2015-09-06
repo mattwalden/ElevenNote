@@ -44,6 +44,7 @@ namespace ElevenNote.Web.Controllers
                 var noteService = new NoteService();
                 var userId = Guid.Parse(User.Identity.GetUserId());
                 var result = noteService.Create(model, userId);
+                TempData.Remove("Result");
                 TempData.Add("Result", result ? "Note added." : "Note not added.");
                 return RedirectToAction("Index");
             }
@@ -88,7 +89,8 @@ namespace ElevenNote.Web.Controllers
                 var noteService = new NoteService();
                 var userId = Guid.Parse(User.Identity.GetUserId());
                 var result = noteService.Delete(id, userId);
-                TempData.Add("Result", result ? "Note Deleted." : "Note not Deleted.");
+            TempData.Remove("Result");
+            TempData.Add("Result", result ? "Note Deleted." : "Note not Deleted.");
                 return RedirectToAction("Index");
            
             
@@ -109,7 +111,7 @@ namespace ElevenNote.Web.Controllers
 
 
         }
-        // Validate Input Allows CKEDIT To Work 
+        // Validate Input false Allows CKEDIT To Work 
         [ValidateInput(false)]
         [HttpGet]
         [ActionName("Details")]
